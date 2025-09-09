@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gov Helpdesk Chatbot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <img src="assets/gov-logo.png" alt="Gov Logo" class="logo" />
+            <h2>Government Helpdesk Chatbot</h2>
+            <select id="language-selector">
+                <option value="en" selected>English</option>
+                <option value="kn">Kannada</option>
+                <option value="hi">Hindi</option>
+            </select>
+        </div>
+
+        <div class="chat-box" id="chat-box"></div>
+
+        <div id="quick-replies" class="quick-replies">
+            <button onclick="quickReply('Leave balance')">Leave Balance</button>
+            <button onclick="quickReply('Salary slip')">Salary Slip</button>
+            <button onclick="quickReply('File tracking')">File Tracking</button>
+        </div>
+
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Type your query..." />
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <audio id="notify-sound" src="assets/notification.mp3" preload="auto"></audio>
+
+    <script src="chat.js"></script>
+</body>
+
+</html>
